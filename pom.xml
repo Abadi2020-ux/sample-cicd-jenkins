@@ -15,7 +15,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<app.runtime>4.2.2</app.runtime>
-		<mule.maven.plugin.version>3.6.3</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.3.9</mule.maven.plugin.version>
 	</properties>
 
 	<build>
@@ -27,15 +27,15 @@
 				<extensions>true</extensions>
 				<configuration>
 				<coundHubDeployment>
-				<username>${username}</username>
-				<password>${password}</password>
-				<environment>${environment}</environment>
-				<environment>${environment}</environment>
-				<applicationName>${application.name}</applicationName>
-				<muleVersion>${mule.version}</muleVersion>
-				<workers>${workers}</workers>
-				<workerType>${worker.type}</workerType>
-			</coundHubDeployment>
+<username>${username}</username>
+<password>${password}</password>
+<environment>${environment}</environment>
+<environment>${environment}</environment>
+<applicationName>${application.name}</applicationName>
+<muleVersion>${mule.version}</muleVersion>
+<workers>${workers}</workers>
+<workerType>${worker.type}</workerType>
+</coundHubDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
