@@ -4,11 +4,11 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
-	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="9177da9c-9662-4b3c-b6c2-2c3afdd07edc" >
-		<http:listener-connection host="0.0.0.0" port="8081" />
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="eed2e98d-a8a3-413d-b3b0-33e720fa6bc4" >
+		<http:listener-connection host="localhost" port="8083" />
 	</http:listener-config>
-	<flow name="jenkins-cicd-project-sampleFlow" doc:id="1c145c1c-34ca-40a6-bf95-f636e9e9f536" >
-		<http:listener doc:name="Listener" doc:id="b372dc54-546b-4852-9878-4bf0f18165a5" config-ref="HTTP_Listener_config" path="/cicd"/>
-		<set-payload value='#["welcome tocicd integration"]' doc:name="Set Payload" doc:id="cbfebde6-8186-489c-81a3-8dee312ee79c" />
+	<flow name="cicd-jenkinsFlow" doc:id="edd3773a-bc16-4aeb-85cc-ea04b2591c7f" >
+		<http:listener doc:name="Listener" doc:id="3c196868-36cf-4fa1-8831-db4dbbd9939e" config-ref="HTTP_Listener_config" path="/cicd"/>
+		<set-payload value="#['hello mule soft']" doc:name="Set Payload" doc:id="616ac7b3-ff24-4e88-ab65-df01fd7ca8c7" />
 	</flow>
 </mule>
