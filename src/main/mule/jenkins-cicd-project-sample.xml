@@ -10,5 +10,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="cicd-jenkinsFlow" doc:id="edd3773a-bc16-4aeb-85cc-ea04b2591c7f" >
 		<http:listener doc:name="Listener" doc:id="3c196868-36cf-4fa1-8831-db4dbbd9939e" config-ref="HTTP_Listener_config" path="/cicd"/>
 		<set-payload value="#['hello mule soft']" doc:name="Set Payload" doc:id="616ac7b3-ff24-4e88-ab65-df01fd7ca8c7" />
+		<logger level="INFO" doc:name="Logger" doc:id="7adff9e8-0858-4cd0-bc5a-8e4b4719b48a" message="#[payload]"/>
 	</flow>
 </mule>
